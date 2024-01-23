@@ -1,4 +1,4 @@
-import {storage , ref , uploadBytesResumable , getDownloadURL, collection, db, addDoc, getDocs} from './firebase.js'
+import {storage , ref , uploadBytesResumable , getDownloadURL, collection, db, addDoc, getDocs, onAuthStateChanged, auth} from './firebase.js'
 
 const pageSpinner = document.getElementById('page-spinner')
 
@@ -33,4 +33,10 @@ querySnapshot.forEach((doc) => {
 });
 }
 
-getAllResturant();
+
+onAuthStateChanged(auth, (user) =>  {
+  if((user && location.pathname.indexOf('resturant') !==  -1)  ||
+   location.pathname === '/' ){
+    getAllResturant();
+  }
+});

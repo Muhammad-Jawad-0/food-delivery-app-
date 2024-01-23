@@ -67,84 +67,112 @@
 
         <div id="page-spinner" class="p-5 text-center">
             <div class="spinner-border page-spinner" role="status">
-              <span class="visually-hidden">Loading...</span>
+                <span class="visually-hidden">Loading...</span>
             </div>
-          </div>
+        </div>
 
         <!-- ========================================Resturent About Start================================== -->
 
         <div style="display: none;" id="main-content">
 
-        <div class="row px-2 py-4">
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <div class="mb-4">
-                                    <img id="res-image" width="200"
-                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQriRE4QczzkkBMgxvvbkEXjVLf_r85-OgM4KqjEHW3bHWYRzmWmOANoTsSUgcUaFSSsT0&usqp=CAU"
-                                        alt="">
+            <div class="row px-2 py-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="mb-4">
+                                        <img id="res-image" width="200"
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQriRE4QczzkkBMgxvvbkEXjVLf_r85-OgM4KqjEHW3bHWYRzmWmOANoTsSUgcUaFSSsT0&usqp=CAU"
+                                            alt="">
+                                    </div>
+                                    <h5 class="card-title" id="res-name"></h5>
+                                    <p class="card-text" id="res-address"></p>
+                                    <span class="badge text-bg-primary">Biryani</span>
+                                    <span class="badge text-bg-primary">Biryani</span>
+                                    <span class="badge text-bg-primary">Biryani</span>
+                                    <span class="badge text-bg-primary">Biryani</span>
+                                    <span class="badge text-bg-primary">Biryani</span>
+                                    <span class="badge text-bg-primary">Biryani</span>
                                 </div>
-                                <h5 class="card-title" id="res-name"></h5>
-                                <p class="card-text" id="res-address"></p>
-                                <span class="badge text-bg-primary">Biryani</span>
-                                <span class="badge text-bg-primary">Biryani</span>
-                                <span class="badge text-bg-primary">Biryani</span>
-                                <span class="badge text-bg-primary">Biryani</span>
-                                <span class="badge text-bg-primary">Biryani</span>
-                                <span class="badge text-bg-primary">Biryani</span>
-                            </div>
-                            <div class="d-flex gap-4 socail-icons">
-                                <i class="fa-brands fa-facebook" style="color: rgb(47, 128, 160);"></i>
-                                <i class="fa-brands fa-square-instagram" style="color: red;"></i>
-                                <i class="fa-brands fa-youtube" style="color: red;"></i>
-                                <i class="fa-brands fa-square-x-twitter" style="color: black;"></i>
+                                <div class="d-flex gap-4 socail-icons">
+                                    <i class="fa-brands fa-facebook" style="color: rgb(47, 128, 160);"></i>
+                                    <i class="fa-brands fa-square-instagram" style="color: red;"></i>
+                                    <i class="fa-brands fa-youtube" style="color: red;"></i>
+                                    <i class="fa-brands fa-square-x-twitter" style="color: black;"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- ========================================Resturent About End================================== -->
-
+                <!-- ========================================Resturent About End================================== -->
 
 
 
-            <!-- ========================================card section start================================== -->
-            <div class="row px-2 py-4">
-                <div id="dishes" class="col-8">
-                    
-                </div>
-                <div class="col-4">
-                    <div class="card text-center">
-                        <div class="card-header font-weight-bold">
-                            <b>cart</b>
-                        </div>
-                        <!-- <div class="card-body">
-            <div>No data avalaible</div>
-        </div> -->
-                        <div class="card dish-card w-100 mb-3">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div class="d-flex align-items-center">
-                                        <img class="dish-img"
-                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnmaAMuwJVSwuyCY-0w2hns-l6GAva73_jWQ&usqp=CAU"
-                                            alt="">
-                                        <div class="p-2">
-                                            <h5 class="card-title">Chicken Biryani</h5>
-                                            <h3 class="card-title">Rs: 150/-</h3>
-                                            <p class="card-text">serves 1 to 2 persons</p>
+
+                <!-- ========================================card section start================================== -->
+                <div class="row px-2 py-4">
+                    <div id="dishes" class="col-8">
+
+                    </div>
+                    <div class="col-4">
+                        <div class="card text-center">
+                            <div class="card-header font-weight-bold">
+                                <b>cart</b>
+                            </div>
+
+                            <div class="card dish-card w-100 mb-3">
+                                <div id="card" class="card-body">
+
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Checkout
+                              </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Checkout</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <div class="mb-3">
+                                                <label for="custumerName" class="form-label">Name</label>
+                                                <input type="text" class="form-control" id="custumerName" placeholder="Enter Your Name">
+                                              </div>
+                                            <div class="mb-3">
+                                                <label for="custumerNumber" class="form-label">Contact Number</label>
+                                                <input type="number" class="form-control" id="custumerNumber" placeholder="Enter Your phone Number">
+                                              </div>
+                                            <div class="mb-3">
+                                                <label for="custumerAddress" class="form-label">Address</label>
+                                                <textarea class="form-control" id="custumerAddress" rows="3" placeholder="Home Address"></textarea>
+                                              </div>
+                                              <div class="d-flex justify-content-between">
+                                                <span>Total Amount</span>
+                                                <span class="fw-bold" id="totalAmount">Rs : 500/-</span>
+                                              </div>
+                                              <div class="d-flex justify-content-between">
+                                                <span>Delivery Charges</span>
+                                                <span class="fw-bold" id="delivaryCharge">Rs :100/-</span>
+                                              </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button id="closeBtn" type="button"  class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button id="placeOrder" class="btn btn-primary">Place order</button>
                                         </div>
                                     </div>
-                                    <a href="#" class="btn btn-primary"><i class="fa-solid fa-trash"></i></a>
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="btn btn-primary">Checkout</a>
                     </div>
-                </div>
-                <!-- <div class="col-8">
+                    <!-- <div class="col-8">
             <div class="card dish-card w-100 mb-3">
                 <div class="card-body">
                     <div class="d-flex align-items-center justify-content-between">
@@ -205,13 +233,13 @@
 
 
 
-                <!-- ========================================card section End================================== -->
+                    <!-- ========================================card section End================================== -->
 
 
+
+                </div>
 
             </div>
-
-        </div>
 
 
 
@@ -221,7 +249,10 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
                 integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
                 crossorigin="anonymous"></script>
+
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <script type="module" src="./js/dishes.js"></script>
+            <script type="module" src="./js/order.js"></script>
 </body>
 
 </html>
